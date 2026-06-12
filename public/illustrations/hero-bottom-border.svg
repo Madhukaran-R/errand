@@ -1,0 +1,32 @@
+<svg width="1440" height="180" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineGlow" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9C7300" stop-opacity="0.35"/>
+      <stop offset="0.18" stop-color="#F3B308" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#FFE289" stop-opacity="1"/>
+      <stop offset="0.82" stop-color="#F3B308" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#9C7300" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="bgFade" x1="720" y1="0" x2="720" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E4AF" stop-opacity="0.56"/>
+      <stop offset="1" stop-color="#F3F0E7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="180" fill="url(#bgFade)"/>
+
+  <path d="M0 78C72 66 144 66 216 78C288 90 360 90 432 78C504 66 576 66 648 78C720 90 792 90 864 78C936 66 1008 66 1080 78C1152 90 1224 90 1296 78C1368 66 1404 66 1440 74" stroke="url(#lineGlow)" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M0 104C96 88 192 88 288 104C384 120 480 120 576 104C672 88 768 88 864 104C960 120 1056 120 1152 104C1248 88 1344 88 1440 102" stroke="#F3B308" stroke-opacity="0.42" stroke-width="2.4" stroke-linecap="round"/>
+
+  <g opacity="0.22" fill="#F3B308">
+    <circle cx="114" cy="70" r="3"/>
+    <circle cx="286" cy="96" r="3"/>
+    <circle cx="460" cy="72" r="3"/>
+    <circle cx="642" cy="95" r="3"/>
+    <circle cx="814" cy="70" r="3"/>
+    <circle cx="986" cy="96" r="3"/>
+    <circle cx="1162" cy="72" r="3"/>
+    <circle cx="1332" cy="95" r="3"/>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+﻿<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="12" width="1176" height="536" rx="34" fill="#12161C"/>
+  <rect x="12" y="12" width="1176" height="536" rx="34" stroke="#2A313D" stroke-width="2"/>
+
+  <text x="54" y="72" fill="#F3B308" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800">Our Services Catalogue</text>
+  <text x="54" y="116" fill="#F6F6F6" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">Fast, reliable, and transparent local errands</text>
+
+  <g transform="translate(54 156)">
+    <rect x="0" y="0" width="258" height="152" rx="22" fill="#1B2330" stroke="#F3B308"/>
+    <circle cx="48" cy="48" r="24" fill="#F3B308"/>
+    <rect x="86" y="30" width="134" height="16" rx="8" fill="#FFF"/>
+    <rect x="86" y="56" width="116" height="12" rx="6" fill="#C8CED8"/>
+    <rect x="28" y="94" width="202" height="10" rx="5" fill="#8B95A5"/>
+    <rect x="28" y="116" width="168" height="10" rx="5" fill="#8B95A5"/>
+  </g>
+
+  <g transform="translate(334 156)">
+    <rect x="0" y="0" width="258" height="152" rx="22" fill="#1B2330" stroke="#F3B308"/>
+    <circle cx="48" cy="48" r="24" fill="#F3B308"/>
+    <rect x="86" y="30" width="140" height="16" rx="8" fill="#FFF"/>
+    <rect x="86" y="56" width="124" height="12" rx="6" fill="#C8CED8"/>
+    <rect x="28" y="94" width="204" height="10" rx="5" fill="#8B95A5"/>
+    <rect x="28" y="116" width="174" height="10" rx="5" fill="#8B95A5"/>
+  </g>
+
+  <g transform="translate(614 156)">
+    <rect x="0" y="0" width="258" height="152" rx="22" fill="#1B2330" stroke="#F3B308"/>
+    <circle cx="48" cy="48" r="24" fill="#F3B308"/>
+    <rect x="86" y="30" width="132" height="16" rx="8" fill="#FFF"/>
+    <rect x="86" y="56" width="110" height="12" rx="6" fill="#C8CED8"/>
+    <rect x="28" y="94" width="198" height="10" rx="5" fill="#8B95A5"/>
+    <rect x="28" y="116" width="162" height="10" rx="5" fill="#8B95A5"/>
+  </g>
+
+  <g transform="translate(894 156)">
+    <rect x="0" y="0" width="252" height="152" rx="22" fill="#1B2330" stroke="#F3B308"/>
+    <circle cx="48" cy="48" r="24" fill="#F3B308"/>
+    <rect x="86" y="30" width="132" height="16" rx="8" fill="#FFF"/>
+    <rect x="86" y="56" width="104" height="12" rx="6" fill="#C8CED8"/>
+    <rect x="28" y="94" width="194" height="10" rx="5" fill="#8B95A5"/>
+    <rect x="28" y="116" width="150" height="10" rx="5" fill="#8B95A5"/>
+  </g>
+
+  <g transform="translate(54 334)">
+    <rect x="0" y="0" width="534" height="176" rx="24" fill="#F3B308"/>
+    <text x="30" y="70" fill="#151515" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800">All Kinds of Errands</text>
+    <text x="30" y="126" fill="#151515" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Fast • Reliable • Affordable</text>
+  </g>
+
+  <g transform="translate(614 334)">
+    <rect x="0" y="0" width="532" height="176" rx="24" fill="#1B2330" stroke="#F3B308"/>
+    <text x="30" y="70" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800">One Trusted Partner</text>
+    <text x="30" y="124" fill="#F3B308" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Anything In Between</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+﻿<svg width="760" height="500" viewBox="0 0 760 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="12" width="736" height="476" rx="30" fill="#131820"/>
+  <rect x="12" y="12" width="736" height="476" rx="30" stroke="#2A313D" stroke-width="2"/>
+
+  <rect x="40" y="38" width="680" height="88" rx="18" fill="#F3B308"/>
+  <text x="68" y="92" fill="#131313" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800">WhatsApp Support</text>
+
+  <rect x="52" y="150" width="448" height="84" rx="18" fill="#FFFFFF"/>
+  <text x="76" y="184" fill="#141414" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Need a pickup from Anna Nagar.</text>
+  <text x="76" y="214" fill="#5A5A5A" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600">Can you deliver in 30 minutes?</text>
+
+  <rect x="256" y="252" width="452" height="84" rx="18" fill="#DFFFE7"/>
+  <text x="280" y="286" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Assigned. Rider is on the way.</text>
+  <text x="280" y="316" fill="#3F3F3F" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600">ETA: 22 minutes.</text>
+
+  <rect x="52" y="360" width="656" height="98" rx="20" fill="#FFFFFF"/>
+  <text x="80" y="422" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800">99 44 00 6016</text>
+</svg>
