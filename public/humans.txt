@@ -1,0 +1,16 @@
+/* TEAM */
+Team: Errand Service
+Contact: support@yourdomain.com
+Website: https://yourdomain.com/errand/
+Twitter: @errandservice
+Facebook: https://www.facebook.com/errandservice
+
+/* SITE */
+Last update: 2026-06-13
+Language: English
+Doctype: HTML5
+IDE: VS Code
+Standards: HTML5, CSS3, ES6+
+
+/* THANKS */
+Thanks to all who support fast and reliable delivery services!

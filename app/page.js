@@ -12,6 +12,183 @@ const getAssetPath = (path) => {
   return path.startsWith(BASE_PATH) ? path : `${BASE_PATH}${path}`;
 };
 
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Errand Service",
+    "url": "https://yourdomain.com/errand",
+    "logo": "https://yourdomain.com/errand/logo.png",
+    "description": "Fast, reliable and transparent local errand and delivery service. Same-day pickup and drop-off with 24/7 support.",
+    "sameAs": [
+      "https://www.facebook.com/errandservice",
+      "https://www.instagram.com/errandservice",
+      "https://twitter.com/errandservice",
+      "https://www.whatsapp.com/send?phone=919944006016"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+91-9944006016",
+      "email": "support@yourdomain.com",
+      "hoursAvailable": "24/7"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressLocality": "Your City",
+      "addressRegion": "Your State"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Errand Service",
+    "@id": "https://yourdomain.com/errand",
+    "url": "https://yourdomain.com/errand",
+    "image": "https://yourdomain.com/errand/hero-image.png",
+    "description": "Fast, reliable, and transparent local errand delivery service with same-day pickup and drop-off.",
+    "priceRange": "₹49-₹99",
+    "areaServed": {
+      "@type": "City",
+      "name": "Your City",
+      "sameAs": "https://en.wikipedia.org/wiki/Your_City"
+    },
+    "serviceArea": {
+      "@type": "City",
+      "name": "Your City"
+    },
+    "serviceType": ["Delivery", "Courier Service", "Errand Service"],
+    "telephone": "+91-9944006016",
+    "email": "support@yourdomain.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "telephone": "+91-9944006016",
+      "availableLanguage": "en",
+      "hoursAvailable": "24/7"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Errand Delivery Service",
+    "description": "Fast, reliable, and transparent local delivery service for shopping, medicines, parcels, food, and more.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Errand Service"
+    },
+    "areaServed": "IN",
+    "availableLanguage": "en",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Delivery Distance Pricing",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "0-2 KMS Delivery",
+          "description": "Perfect for quick pick-ups & drop-offs",
+          "price": "49",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "2-5 KMS Delivery",
+          "description": "Ideal for local errands & deliveries",
+          "price": "69",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "5-8 KMS Delivery",
+          "description": "For farther errands within the city",
+          "price": "99",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Errand Service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Errand Service is a fast, reliable, and transparent local delivery service offering same-day pickup and drop-off for shopping, medicines, documents, food, gifts, and more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum delivery charge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our minimum delivery charge is ₹49 for distances up to 2 KMs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does delivery take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer same-day delivery with quick turnaround times. Exact timing depends on your location and order complexity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your riders trusted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all our riders are thoroughly verified and trained. We prioritize safety and reliability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is 24/7 support available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our customer support team is available 24/7 to assist with any queries or issues."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://yourdomain.com/errand/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://yourdomain.com/errand/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Pricing",
+        "item": "https://yourdomain.com/errand/#pricing"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "How It Works",
+        "item": "https://yourdomain.com/errand/#how-it-works"
+      }
+    ]
+  }
+];
+
 const navLinks = [
   { label: "Home", href: "#" },
   { label: "Services", href: "#services" },
@@ -96,71 +273,71 @@ const howItWorks = [
   }
 ];
 
-function ServiceIcon({ type }) {
-  const p = {
-    cart:      <><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></>,
-    medicine:  <><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></>,
-    doc:       <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></>,
-    car:       <><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></>,
-    food:      <><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></>,
-    gift:      <><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></>,
-    bag:       <><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></>,
-    returns:   <><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 0 1 3.51 15"/></>,
-    briefcase: <><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></>,
-    elderly:   <><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></>
-  };
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      {p[type] || p.bag}
-    </svg>
-  );
-}
+const ICON_CLASSES = {
+  shield: "fa-shield-heart",
+  bolt: "fa-bolt",
+  rupee: "fa-indian-rupee-sign",
+  chat: "fa-comments",
+  cart: "fa-cart-shopping",
+  medicine: "fa-prescription-bottle-medical",
+  doc: "fa-file-lines",
+  car: "fa-car-side",
+  food: "fa-burger",
+  gift: "fa-gift",
+  bag: "fa-bag-shopping",
+  returns: "fa-rotate-left",
+  briefcase: "fa-briefcase",
+  elderly: "fa-hands-holding-circle",
+  phone: "fa-phone-volume",
+  whatsapp: "fa-whatsapp",
+  support: "fa-headset",
+  rider: "fa-motorcycle",
+  package: "fa-box-open",
+  instagram: "fa-instagram",
+  email: "fa-envelope",
+  location: "fa-location-dot"
+};
 
-function WhyIcon({ type }) {
-  if (type === "phone")    return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>;
-  if (type === "whatsapp") return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.7C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5ZM12 21.9c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.1 13.9 2.1 12 2.1 6.5 6.5 2.1 12 2.1c2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.8 4.4 2.8 7 0 5.5-4.4 9.9-9.9 9.9Z"/></svg>;
-  if (type === "bolt")     return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>;
-  if (type === "rupee")    return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="18" y2="3"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="15.25" y1="3" x2="9" y2="21"/></svg>;
-  if (type === "shield")   return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>;
-  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5ZM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5Z"/></svg>;
-}
+const ICON_TONES = {
+  shield: { color: "#2dd4bf", bg: "rgba(45, 212, 191, 0.18)" },
+  bolt: { color: "#f59e0b", bg: "rgba(245, 158, 11, 0.2)" },
+  rupee: { color: "#22c55e", bg: "rgba(34, 197, 94, 0.18)" },
+  chat: { color: "#38bdf8", bg: "rgba(56, 189, 248, 0.18)" },
+  cart: { color: "#f97316", bg: "rgba(249, 115, 22, 0.16)" },
+  medicine: { color: "#ef4444", bg: "rgba(239, 68, 68, 0.14)" },
+  doc: { color: "#0ea5e9", bg: "rgba(14, 165, 233, 0.14)" },
+  car: { color: "#6366f1", bg: "rgba(99, 102, 241, 0.14)" },
+  food: { color: "#f59e0b", bg: "rgba(245, 158, 11, 0.15)" },
+  gift: { color: "#ec4899", bg: "rgba(236, 72, 153, 0.14)" },
+  bag: { color: "#10b981", bg: "rgba(16, 185, 129, 0.14)" },
+  returns: { color: "#14b8a6", bg: "rgba(20, 184, 166, 0.14)" },
+  briefcase: { color: "#a855f7", bg: "rgba(168, 85, 247, 0.14)" },
+  elderly: { color: "#eab308", bg: "rgba(234, 179, 8, 0.16)" },
+  phone: { color: "#fb7185", bg: "rgba(251, 113, 133, 0.16)" },
+  whatsapp: { color: "#22c55e", bg: "rgba(34, 197, 94, 0.16)" },
+  support: { color: "#06b6d4", bg: "rgba(6, 182, 212, 0.16)" },
+  rider: { color: "#f97316", bg: "rgba(249, 115, 22, 0.16)" },
+  package: { color: "#3b82f6", bg: "rgba(59, 130, 246, 0.16)" }
+};
 
-function TrustIcon({ type }) {
-  if (type === "shield") return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>;
-  if (type === "bolt")   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>;
-  if (type === "rupee")  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="18" y2="3"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="15.25" y1="3" x2="9" y2="21"/></svg>;
-  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>;
-}
+const getIconTone = (name) => ICON_TONES[name] || { color: "#f3b308", bg: "rgba(243, 179, 8, 0.16)" };
 
-function HowItWorksIcon({ type }) {
-  if (type === "whatsapp") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.7C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5ZM12 21.9c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.1 13.9 2.1 12 2.1 6.5 6.5 2.1 12 2.1c2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.8 4.4 2.8 7 0 5.5-4.4 9.9-9.9 9.9Zm5.6-7.5c-.3-.2-1.7-.9-2-.9-.3-.1-.6-.2-.8.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.2-.2.3-.3.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4-.1-.6-.1-.2-.7-1.6-1-2.3-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.5.1-.7.3-.2.2-.8.8-.8 2s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.8 2.5 1.1 2.5.7 3.2.6.7-.1 2.4-.7 2.7-1.3.3-.6.3-1.1.2-1.2-.1-.1-1-.5-1.3-.7Z" fill="currentColor"/>
-      </svg>
-    );
-  }
-
-  if (type === "rider") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="4.5" r="2" fill="currentColor"/>
-        <path d="M18.5 8.5c-.4-.8-1.2-1.3-2.1-1.3h-1.8l-1-2H10c-.8 0-1.5.4-2 1L6.5 8.8C5.6 9.3 5 10.3 5 11.4V15a1 1 0 0 0 1 1h.2a2.5 2.5 0 0 0 4.6 0h2.4a2.5 2.5 0 0 0 4.6 0H18a1 1 0 0 0 1-1v-3.5c0-.7-.2-1.4-.5-2Zm-11 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1.5-4H7v-1.1c0-.5.3-1 .7-1.3l1.1-2h5.4l.8 1.6h1.5c.3 0 .5.1.7.3l.8 1.5H16Z" fill="currentColor"/>
-      </svg>
-    );
-  }
-
-  // package
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M21 8.5 12 4 3 8.5V16l9 4.5 9-4.5V8.5ZM12 6.2l5.6 2.8-2.1 1-5.6-2.8 2.1-1ZM12 11 6.4 8.2l2.1-1.1L14.1 10 12 11Zm-8 1 7 3.5v5.2L4 17.2V12Zm9 8.7V15.5l7-3.5v5.2l-7 3.5Z" fill="currentColor"/>
-    </svg>
-  );
+function LibraryIcon({ name, className = "" }) {
+  const family = name === "whatsapp" || name === "instagram" ? "fa-brands" : "fa-solid";
+  const icon = ICON_CLASSES[name] || "fa-circle";
+  return <i className={`${family} ${icon} ${className}`.trim()} aria-hidden="true" />;
 }
 
 export default function HomePage() {
   return (
     <>
+    {structuredData.map((schema, index) => (
+      <script
+        key={index}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+    ))}
     <header className="site-header">
       <div className="header-inner">
         <div className="header-brand">
@@ -176,9 +353,7 @@ export default function HomePage() {
           {navLinks.map(l => <a key={l.label} href={l.href}>{l.label}</a>)}
         </nav>
         <a className="header-cta" href="https://wa.me/919944006016" target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{width:"1rem",height:"1rem"}}>
-            <path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.7C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5Z"/>
-          </svg>
+          <LibraryIcon name="whatsapp" />
           WhatsApp Us
         </a>
       </div>
@@ -201,9 +376,7 @@ export default function HomePage() {
           </p>
           <div className="action-row">
             <a className="btn-brand" href="https://wa.me/919944006016" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{width:"1.1rem",height:"1.1rem"}}>
-                <path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.7C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5Z"/>
-              </svg>
+                <LibraryIcon name="whatsapp" />
               WhatsApp Now
             </a>
             <a className="btn-outline-light" href="#services">View Services &rarr;</a>
@@ -211,21 +384,29 @@ export default function HomePage() {
           <div className="hero-trust">
             {topPills.map(pill => (
               <div key={pill.label} className="trust-pill">
-                <span className="trust-pill-icon"><TrustIcon type={pill.icon} /></span>
+                <span className="trust-pill-icon" style={getIconTone(pill.icon)}><LibraryIcon name={pill.icon} /></span>
                 {pill.label}
               </div>
             ))}
           </div>
         </div>
         <div className="hero-visual">
-          <Image
-            src={getAssetPath("/illustrations/rider-scene.svg")}
-            alt="Errand rider delivering on scooter"
-            width={1200}
-            height={760}
+          <LottieAnimation
             className="hero-img"
-            priority
+            src="/lottie/hero.lottie"
+            ariaLabel="Errand rider delivering on scooter"
           />
+          <div className="hero-price-card hero-price-top-left">
+            <div className="hero-price-left">
+              <p className="hero-price-label">Starting From</p>
+              <div className="hero-price-amount">₹49</div>
+            </div>
+            <div className="chat-tail chat-tail-left"></div>
+          </div>
+          <div className="hero-text-card hero-text-bottom-right">
+            <p className="hero-text-content">Quick pick-up & drop-off<br />Delivery at your doorstep</p>
+            <div className="chat-tail chat-tail-right"></div>
+          </div>
         </div>
       </section>
 
@@ -236,7 +417,7 @@ export default function HomePage() {
         <div className="service-grid-v2">
           {serviceCards.map(card => (
             <article key={card.title} className="service-card-v2">
-              <span className="service-icon-wrap" aria-hidden="true"><ServiceIcon type={card.icon} /></span>
+              <span className="service-icon-wrap" aria-hidden="true" style={getIconTone(card.icon)}><LibraryIcon name={card.icon} /></span>
               <h3>{card.title}</h3>
               <p>{card.desc}</p>
             </article>
@@ -282,8 +463,8 @@ export default function HomePage() {
               <article className="how-card">
                 <div className="how-card-top">
                   <p className="how-step">{item.step}</p>
-                  <span className="how-icon" aria-hidden="true">
-                    <HowItWorksIcon type={item.icon} />
+                  <span className="how-icon" aria-hidden="true" style={getIconTone(item.icon)}>
+                    <LibraryIcon name={item.icon} />
                   </span>
                 </div>
                 <h3>{item.title}</h3>
@@ -304,7 +485,7 @@ export default function HomePage() {
         <div className="why-grid">
           {whyChoose.map(item => (
             <div key={item.title} className="why-card">
-              <span className="why-card-icon" aria-hidden="true"><WhyIcon type={item.icon} /></span>
+              <span className="why-card-icon" aria-hidden="true" style={getIconTone(item.icon)}><LibraryIcon name={item.icon} /></span>
               <strong>{item.title}</strong>
               <p>{item.desc}</p>
             </div>
@@ -340,17 +521,17 @@ export default function HomePage() {
           <p className="contact-title">Ready When You Are</p>
           <h2 className="contact-heading">Text or WhatsApp us now</h2>
           <a className="contact-number" href="tel:+919944006016" aria-label="Call 99 44 00 6016">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8C8.1 13.8 10.2 15.9 13.2 17.4L15.5 15.1C15.8 14.8 16.2 14.7 16.6 14.8C17.9 15.2 19.3 15.4 20.8 15.4C21.4 15.4 22 15.9 22 16.6V20.8C22 21.4 21.4 22 20.8 22C10.4 22 2 13.6 2 3.2C2 2.6 2.6 2 3.2 2H7.4C8.1 2 8.6 2.6 8.6 3.2C8.6 4.7 8.8 6.1 9.2 7.4C9.3 7.8 9.2 8.2 8.9 8.5L6.6 10.8Z" fill="currentColor"/></svg>
+            <LibraryIcon name="phone" />
             99 44 00 6016
           </a>
           <p className="contact-tag">One message can get it done. Fast reply, zero hassle.</p>
           <div className="contact-actions" aria-label="Contact actions">
             <a className="contact-action contact-action-primary" href="https://wa.me/919944006016" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5C18.2 1.2 15.2 0 12 0C5.4 0 0 5.4 0 12C0 14.1 0.6 16.1 1.7 17.9L0 24L6.3 22.3C8 23.3 10 24 12 24H12C18.6 24 24 18.6 24 12C24 8.8 22.8 5.8 20.5 3.5Z" fill="currentColor"/></svg>
+              <LibraryIcon name="whatsapp" />
               WhatsApp
             </a>
             <a className="contact-action" href="mailto:errandsupport@gmail.com">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5C2 3.9 2.9 3 4 3H20C21.1 3 22 3.9 22 5V19C22 20.1 21.1 21 20 21H4C2.9 21 2 20.1 2 19V5ZM4 6.3V19H20V6.3L12 12L4 6.3ZM5.2 5L12 9.9L18.8 5H5.2Z" fill="currentColor"/></svg>
+              <LibraryIcon name="email" />
               Email
             </a>
           </div>
@@ -372,9 +553,7 @@ export default function HomePage() {
 
       <section className="cta-strip-v2" aria-label="WhatsApp call to action">
         <div className="cta-strip-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.7C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5Z"/>
-          </svg>
+          <LibraryIcon name="whatsapp" />
         </div>
         <div className="cta-strip-text">
           <p>Need Something Done?</p>
@@ -397,13 +576,13 @@ export default function HomePage() {
           <p>We run errands, so you don&apos;t have to.</p>
           <div className="footer-socials">
             <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" fill="none" stroke="#101010" strokeWidth="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#101010" strokeWidth="2" strokeLinecap="round"/></svg>
+              <LibraryIcon name="instagram" />
             </a>
             <a href="https://wa.me/919944006016" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.7C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5Z"/></svg>
+              <LibraryIcon name="whatsapp" />
             </a>
             <a href="mailto:errandsupport@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5C2 3.9 2.9 3 4 3H20C21.1 3 22 3.9 22 5V19C22 20.1 21.1 21 20 21H4C2.9 21 2 20.1 2 19V5ZM4 6.3V19H20V6.3L12 12L4 6.3ZM5.2 5L12 9.9L18.8 5H5.2Z"/></svg>
+              <LibraryIcon name="email" />
             </a>
           </div>
         </div>
@@ -417,9 +596,9 @@ export default function HomePage() {
         </div>
         <div className="footer-column">
           <h3>Contact Us</h3>
-          <a href="tel:+919944006016">&#128222; 99 44 00 6016</a>
-          <a href="mailto:errandsupport@gmail.com">&#9993; errandsupport@gmail.com</a>
-          <p>&#128205; Chennai, Tamil Nadu</p>
+          <a href="tel:+919944006016"><LibraryIcon name="phone" className="inline-icon" /> 99 44 00 6016</a>
+          <a href="mailto:errandsupport@gmail.com"><LibraryIcon name="email" className="inline-icon" /> errandsupport@gmail.com</a>
+          <p><LibraryIcon name="location" className="inline-icon" /> Chennai, Tamil Nadu</p>
           <a className="footer-wa-btn" href="https://wa.me/919944006016" target="_blank" rel="noreferrer">WhatsApp Us</a>
         </div>
         <div className="footer-bottom">
@@ -432,7 +611,7 @@ export default function HomePage() {
       </footer>
 
       <a className="sticky-whatsapp-btn" href="https://wa.me/919944006016" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5C18.2 1.2 15.2 0 12 0C5.4 0 0 5.4 0 12C0 14.1 0.6 16.1 1.7 17.9L0 24L6.3 22.3C8 23.3 10 24 12 24H12C18.6 24 24 18.6 24 12C24 8.8 22.8 5.8 20.5 3.5ZM12 21.9C10.2 21.9 8.5 21.4 7 20.5L6.6 20.3L2.9 21.3L3.9 17.7L3.7 17.3C2.7 15.7 2.1 13.9 2.1 12C2.1 6.5 6.5 2.1 12 2.1C14.7 2.1 17.2 3.1 19.1 5C21 6.9 21.9 9.4 21.9 12C21.9 17.5 17.5 21.9 12 21.9Z" fill="currentColor"/></svg>
+        <LibraryIcon name="whatsapp" />
         <span>Chat on WhatsApp</span>
       </a>
     </main>

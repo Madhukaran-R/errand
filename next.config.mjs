@@ -5,7 +5,13 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  trailingSlash: true
+  trailingSlash: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  productionBrowserSourceMaps: false,
+  reactStrictMode: true,
+  turbopack: {}
 };
 
 export default nextConfig;
