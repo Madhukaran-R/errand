@@ -16,9 +16,9 @@ export const metadata = {
   title: "Errand Service",
   description: "Fast, reliable and transparent local errand and delivery service",
   icons: {
-    icon: "/favicon.gif",
-    shortcut: "/favicon.gif",
-    apple: "/favicon.gif"
+    icon: "/errand/favicon.gif",
+    shortcut: "/errand/favicon.gif",
+    apple: "/errand/favicon.gif"
   }
 };
 
