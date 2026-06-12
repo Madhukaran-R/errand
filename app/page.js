@@ -1,6 +1,17 @@
 import Image from "next/image";
 import LottieAnimation from "./components/LottieAnimation";
 
+const BASE_PATH = "/errand";
+
+const getAssetPath = (path) => {
+  if (typeof window === "undefined") {
+    // Server-side: always use basePath
+    return `${BASE_PATH}${path}`;
+  }
+  // Client-side: check if already has basePath
+  return path.startsWith(BASE_PATH) ? path : `${BASE_PATH}${path}`;
+};
+
 const topPills = ["Fast & Reliable", "Safe & Secure", "Doorstep Convenience", "Trusted Locally"];
 
 const serviceCards = [
@@ -182,7 +193,7 @@ export default function HomePage() {
       <div className="hero-bottom-border-wrapper" aria-hidden="true">
         <div className="hero-bottom-border">
           <Image
-            src="/illustrations/hero-bottom-border.svg"
+            src={getAssetPath("/illustrations/hero-bottom-border.svg")}
             alt=""
             fill
             sizes="100vw"
@@ -334,7 +345,7 @@ export default function HomePage() {
 
         <div className="contact-visual">
           <Image
-            src="/illustrations/chat-card.svg"
+            src={getAssetPath("/illustrations/chat-card.svg")}
             alt="Illustrated WhatsApp chat example"
             width={640}
             height={430}
