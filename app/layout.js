@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/gif" href="/favicon.gif" />
-        <link rel="shortcut icon" type="image/gif" href="/favicon.gif" />
+        <link rel="icon" type="image/gif" href="/errand/favicon.gif" />
+        <link rel="shortcut icon" type="image/gif" href="/errand/favicon.gif" />
       </head>
       <body className={`${display.variable} ${body.variable}`}>{children}</body>
     </html>
