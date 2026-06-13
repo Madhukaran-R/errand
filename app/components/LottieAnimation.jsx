@@ -1,12 +1,16 @@
 "use client";
 
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { useEffect, useState, useMemo } from "react";
+import dynamic from "next/dynamic";
+import { useEffect, useMemo, useState } from "react";
+
+const DotLottiePlayer = dynamic(
+  () => import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
+  { ssr: false }
+);
 
 export default function LottieAnimation({ src, className, ariaLabel }) {
   const [reducedMotion, setReducedMotion] = useState(false);
 
-  // Prepend basePath for GitHub Pages deployment
   const assetPath = useMemo(() => {
     if (typeof window !== "undefined" && !src.startsWith("/errand")) {
       return `/errand${src}`;
@@ -27,7 +31,7 @@ export default function LottieAnimation({ src, className, ariaLabel }) {
   }, []);
 
   return (
-    <DotLottieReact
+    <DotLottiePlayer
       src={assetPath}
       className={className}
       autoplay={!reducedMotion}

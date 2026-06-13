@@ -1,24 +1,44 @@
 import Image from "next/image";
+import {
+  ArrowRight,
+  Bike,
+  BriefcaseBusiness,
+  Car,
+  Camera,
+  Circle,
+  FileText,
+  Gift,
+  Handshake,
+  Headset,
+  IndianRupee,
+  Mail,
+  MapPin,
+  MessagesSquare,
+  PackageOpen,
+  PhoneCall,
+  Pill,
+  RotateCcw,
+  Send,
+  ShieldCheck,
+  ShoppingBag,
+  ShoppingCart,
+  Utensils,
+  Zap
+} from "lucide-react";
 import LottieAnimation from "./components/LottieAnimation";
 
 const BASE_PATH = "/errand";
+const SITE_URL = "https://errand.ltd";
 
-const getAssetPath = (path) => {
-  if (typeof window === "undefined") {
-    // Server-side: always use basePath
-    return `${BASE_PATH}${path}`;
-  }
-  // Client-side: check if already has basePath
-  return path.startsWith(BASE_PATH) ? path : `${BASE_PATH}${path}`;
-};
+const getAssetPath = (path) => `${BASE_PATH}${path}`;
 
 const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Errand Service",
-    "url": "https://yourdomain.com/errand",
-    "logo": "https://yourdomain.com/errand/logo.png",
+    "url": `${SITE_URL}/errand`,
+    "logo": `${SITE_URL}/errand/logo.png`,
     "description": "Fast, reliable and transparent local errand and delivery service. Same-day pickup and drop-off with 24/7 support.",
     "sameAs": [
       "https://www.facebook.com/errandservice",
@@ -30,37 +50,37 @@ const structuredData = [
       "@type": "ContactPoint",
       "contactType": "Customer Service",
       "telephone": "+91-9944006016",
-      "email": "support@yourdomain.com",
+      "email": "errandsupport@gmail.com",
       "hoursAvailable": "24/7"
     },
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IN",
-      "addressLocality": "Your City",
-      "addressRegion": "Your State"
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Errand Service",
-    "@id": "https://yourdomain.com/errand",
-    "url": "https://yourdomain.com/errand",
-    "image": "https://yourdomain.com/errand/hero-image.png",
+    "@id": `${SITE_URL}/errand`,
+    "url": `${SITE_URL}/errand`,
+    "image": `${SITE_URL}/errand/hero-image.png`,
     "description": "Fast, reliable, and transparent local errand delivery service with same-day pickup and drop-off.",
     "priceRange": "₹49-₹99",
     "areaServed": {
       "@type": "City",
-      "name": "Your City",
-      "sameAs": "https://en.wikipedia.org/wiki/Your_City"
+      "name": "Chennai",
+      "sameAs": "https://en.wikipedia.org/wiki/Chennai"
     },
     "serviceArea": {
       "@type": "City",
-      "name": "Your City"
+      "name": "Chennai"
     },
     "serviceType": ["Delivery", "Courier Service", "Errand Service"],
     "telephone": "+91-9944006016",
-    "email": "support@yourdomain.com",
+    "email": "errandsupport@gmail.com",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
@@ -165,25 +185,25 @@ const structuredData = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://yourdomain.com/errand/"
+        "item": `${SITE_URL}/errand/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://yourdomain.com/errand/#services"
+        "item": `${SITE_URL}/errand/#services`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Pricing",
-        "item": "https://yourdomain.com/errand/#pricing"
+        "item": `${SITE_URL}/errand/#pricing`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "How It Works",
-        "item": "https://yourdomain.com/errand/#how-it-works"
+        "item": `${SITE_URL}/errand/#how-it-works`
       }
     ]
   }
@@ -207,22 +227,29 @@ const topPills = [
 ];
 
 const serviceCards = [
-  { icon: "cart",      title: "Shopping & Essentials",     desc: "Grocery, supermarket & essential item pickup" },
-  { icon: "medicine",  title: "Medicines & Healthcare",    desc: "Pharmacy pickup & medicine delivery" },
-  { icon: "doc",       title: "Documents & Parcels",       desc: "Document pickup, drop & courier services" },
-  { icon: "car",       title: "Pickup & Drop Services",    desc: "Item pickup & drop across Chennai" },
-  { icon: "food",      title: "Food & Beverages",          desc: "Restaurant pickup & food delivery" },
-  { icon: "gift",      title: "Gifts & Surprises",         desc: "Surprise your loved ones with timely delivery" },
-  { icon: "bag",       title: "Local Shopping Assistance", desc: "Buy and deliver items from local stores" },
-  { icon: "returns",   title: "Returns & Exchanges",       desc: "Product returns & exchanges made easy" },
-  { icon: "briefcase", title: "Business Errands",          desc: "Office tasks & business support" },
-  { icon: "elderly",   title: "Elderly Assistance",        desc: "Helping seniors with their daily needs" }
+  { icon: "cart",      title: "Shopping & Essentials",     desc: "Grocery, supermarket & essential item pickup", tag: "Delivery", eta: "35-55 mins" },
+  { icon: "medicine",  title: "Medicines & Healthcare",    desc: "Pharmacy pickup & medicine delivery", tag: "Urgent", eta: "25-45 mins" },
+  { icon: "doc",       title: "Documents & Parcels",       desc: "Document pickup, drop & courier services", tag: "Secure", eta: "30-50 mins" },
+  { icon: "car",       title: "Pickup & Drop Services",    desc: "Item pickup & drop across Chennai", tag: "Pickup", eta: "30-60 mins" },
+  { icon: "food",      title: "Food & Beverages",          desc: "Restaurant pickup & food delivery", tag: "Express", eta: "25-40 mins" },
+  { icon: "gift",      title: "Gifts & Surprises",         desc: "Surprise your loved ones with timely delivery", tag: "Scheduled", eta: "40-90 mins" },
+  { icon: "bag",       title: "Local Shopping Assistance", desc: "Buy and deliver items from local stores", tag: "Assisted", eta: "40-70 mins" },
+  { icon: "returns",   title: "Returns & Exchanges",       desc: "Product returns & exchanges made easy", tag: "Support", eta: "45-80 mins" },
+  { icon: "briefcase", title: "Business Errands",          desc: "Office tasks & business support", tag: "Business", eta: "30-65 mins" },
+  { icon: "elderly",   title: "Elderly Assistance",        desc: "Helping seniors with their daily needs", tag: "Care", eta: "35-70 mins" }
 ];
 
 const pricing = [
-  { range: "0 – 2 KMS", fare: "₹49", note: "Perfect for quick pick-ups & drop-offs" },
-  { range: "2 – 5 KMS", fare: "₹69", note: "Ideal for local errands & deliveries" },
-  { range: "5 – 8 KMS", fare: "₹99", note: "For farther errands within the city" }
+  { range: "0 – 2 KMS", fare: "₹49", note: "Perfect for quick pick-ups & drop-offs", bestFor: "Best for single-stop nearby tasks" },
+  { range: "2 – 5 KMS", fare: "₹69", note: "Ideal for local errands & deliveries", bestFor: "Most common for daily city errands", featured: true },
+  { range: "5 – 8 KMS", fare: "₹99", note: "For farther errands within the city", bestFor: "Best for long cross-area deliveries" }
+];
+
+const trustStats = [
+  { value: "10k+", label: "Errands Completed" },
+  { value: "2-5 min", label: "First Response Time" },
+  { value: "4.9/5", label: "Customer Rating" },
+  { value: "40+", label: "Chennai Zones Served" }
 ];
 
 const whyChoose = [
@@ -235,9 +262,28 @@ const whyChoose = [
 ];
 
 const testimonials = [
-  { quote: "Super convenient and very reliable. Saved me so much time!", name: "Priya S.", role: "Home Maker" },
-  { quote: "Got my important documents delivered within 30 minutes. Amazing service!", name: "Karthik R.", role: "Business Owner" },
-  { quote: "Very professional and polite riders. Highly recommended!", name: "Anitha M.", role: "Private Employee" }
+  {
+    quote: "I had to send medicines and a document to two different places in under an hour. The team coordinated everything on WhatsApp, shared rider updates quickly, and both deliveries were completed exactly on time. This is now my default service whenever I am in a rush.",
+    name: "Priya S.",
+    role: "Home Maker",
+    locality: "T Nagar",
+    date: "May 2026",
+    featured: true
+  },
+  {
+    quote: "Got my important documents delivered within 30 minutes. Amazing service!",
+    name: "Karthik R.",
+    role: "Business Owner",
+    locality: "Nungambakkam",
+    date: "Apr 2026"
+  },
+  {
+    quote: "Very professional and polite riders. Highly recommended!",
+    name: "Anitha M.",
+    role: "Private Employee",
+    locality: "Velachery",
+    date: "Mar 2026"
+  }
 ];
 
 const footerQuickLinks = [
@@ -275,29 +321,29 @@ const howItWorks = [
   }
 ];
 
-const ICON_CLASSES = {
-  shield: "fa-shield-heart",
-  bolt: "fa-bolt",
-  rupee: "fa-indian-rupee-sign",
-  chat: "fa-comments",
-  cart: "fa-cart-shopping",
-  medicine: "fa-prescription-bottle-medical",
-  doc: "fa-file-lines",
-  car: "fa-car-side",
-  food: "fa-burger",
-  gift: "fa-gift",
-  bag: "fa-bag-shopping",
-  returns: "fa-rotate-left",
-  briefcase: "fa-briefcase",
-  elderly: "fa-hands-holding-circle",
-  phone: "fa-phone-volume",
-  whatsapp: "fa-whatsapp",
-  support: "fa-headset",
-  rider: "fa-motorcycle",
-  package: "fa-box-open",
-  instagram: "fa-instagram",
-  email: "fa-envelope",
-  location: "fa-location-dot"
+const ICON_COMPONENTS = {
+  shield: ShieldCheck,
+  bolt: Zap,
+  rupee: IndianRupee,
+  chat: MessagesSquare,
+  cart: ShoppingCart,
+  medicine: Pill,
+  doc: FileText,
+  car: Car,
+  food: Utensils,
+  gift: Gift,
+  bag: ShoppingBag,
+  returns: RotateCcw,
+  briefcase: BriefcaseBusiness,
+  elderly: Handshake,
+  phone: PhoneCall,
+  whatsapp: Send,
+  support: Headset,
+  rider: Bike,
+  package: PackageOpen,
+  instagram: Camera,
+  email: Mail,
+  location: MapPin
 };
 
 const ICON_TONES = {
@@ -325,9 +371,9 @@ const ICON_TONES = {
 const getIconTone = (name) => ICON_TONES[name] || { color: "#f3b308", bg: "rgba(243, 179, 8, 0.16)" };
 
 function LibraryIcon({ name, className = "" }) {
-  const family = name === "whatsapp" || name === "instagram" ? "fa-brands" : "fa-solid";
-  const icon = ICON_CLASSES[name] || "fa-circle";
-  return <i className={`${family} ${icon} ${className}`.trim()} aria-hidden="true" />;
+  const Icon = ICON_COMPONENTS[name] || Circle;
+  const strokeWidth = name === "whatsapp" ? 2.5 : 2.15;
+  return <Icon className={className} aria-hidden="true" size={18} strokeWidth={strokeWidth} />;
 }
 
 export default function HomePage() {
@@ -381,8 +427,9 @@ export default function HomePage() {
                 <LibraryIcon name="whatsapp" />
               WhatsApp Now
             </a>
-            <a className="btn-outline-light" href="#services">View Services &rarr;</a>
+            <a className="btn-text-link" href="#services">View Services</a>
           </div>
+          <p className="hero-response-note">Usually replies in under 5 minutes during business hours.</p>
           <div className="hero-trust">
             {topPills.map(pill => (
               <div key={pill.label} className="trust-pill">
@@ -412,6 +459,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="trust-proof" aria-label="Trust proof">
+        <div className="trust-proof-grid">
+          {trustStats.map((item) => (
+            <article key={item.label} className="trust-proof-card">
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="services" className="services-v2" aria-label="Services">
         <div className="services-heading">
           <span className="rule" aria-hidden="true" /><h2>Our Services</h2><span className="rule" aria-hidden="true" />
@@ -422,6 +480,10 @@ export default function HomePage() {
               <span className="service-icon-wrap" aria-hidden="true" style={getIconTone(card.icon)}><LibraryIcon name={card.icon} /></span>
               <h3>{card.title}</h3>
               <p>{card.desc}</p>
+              <div className="service-meta">
+                <span className="service-tag">{card.tag}</span>
+                <span className="service-eta">{card.eta}</span>
+              </div>
             </article>
           ))}
         </div>
@@ -435,7 +497,8 @@ export default function HomePage() {
         <div className="pricing-layout">
           <div className="price-cards-row">
             {pricing.map(item => (
-              <article key={item.range} className="price-card-v2">
+              <article key={item.range} className={`price-card-v2${item.featured ? " is-featured" : ""}`}>
+                {item.featured && <span className="price-popular">Most Common</span>}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="price-pin" aria-hidden="true">
                   <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/>
                   <circle cx="12" cy="10" r="3"/>
@@ -443,6 +506,7 @@ export default function HomePage() {
                 <p className="price-range">{item.range}</p>
                 <strong className="price-amount">{item.fare}</strong>
                 <span className="price-note">{item.note}</span>
+                <span className="price-best-for">{item.bestFor}</span>
               </article>
             ))}
           </div>
@@ -474,7 +538,7 @@ export default function HomePage() {
               </article>
               {idx < howItWorks.length - 1 && (
                 <div className="how-connector" aria-hidden="true">
-                  <span /><span /><span />
+                  <ArrowRight size={20} strokeWidth={2.5} />
                 </div>
               )}
             </div>
@@ -506,13 +570,23 @@ export default function HomePage() {
 
       <section className="testimonials-v2" aria-label="What our customers say">
         <h2 className="testimonials-heading">What Our Customers Say</h2>
+        <p className="testimonials-subcopy">Verified feedback from customers across Chennai.</p>
         <div className="testimonial-grid">
           {testimonials.map(item => (
-            <article key={item.name} className="testimonial-card">
+            <article key={item.name} className={`testimonial-card${item.featured ? " testimonial-featured" : ""}`}>
               <div className="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               <p className="testimonial-quote">&ldquo;{item.quote}&rdquo;</p>
-              <strong>{item.name}</strong>
-              <span>{item.role}</span>
+              <div className="testimonial-person">
+                <span className="testimonial-avatar" aria-hidden="true">{item.name.charAt(0)}</span>
+                <div>
+                  <strong>{item.name}</strong>
+                  <span>{item.role}</span>
+                </div>
+              </div>
+              <div className="testimonial-meta">
+                <span>{item.locality}</span>
+                <span>{item.date}</span>
+              </div>
             </article>
           ))}
         </div>

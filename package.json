@@ -11,8 +11,8 @@
     "export": "next build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.2.0",
     "@lottiefiles/dotlottie-react": "^0.19.4",
+    "lucide-react": "^1.18.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

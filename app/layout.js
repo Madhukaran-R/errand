@@ -1,6 +1,7 @@
 import "./globals.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+
+const SITE_URL = "https://errand.ltd";
 
 const display = Bebas_Neue({
   weight: "400",
@@ -17,30 +18,39 @@ const body = Space_Grotesk({
 
 export const metadata = {
   title: "Errand Service - Fast & Reliable Same-Day Local Delivery Starting ₹49",
-  description: "Experience fast, reliable, and transparent local errand services. Same-day pickup, drop-off, and delivery. Trusted riders, 24/7 support. Starting from ₹49 for 2KM.",
+  description: "Fast, reliable, and transparent local errand service in Chennai. Same-day pickup, drop-off, and delivery with trusted riders and 24/7 support. Starting from ₹49 for 2 km.",
   keywords: [
     "errand service",
+    "errand service chennai",
     "local delivery",
+    "local delivery chennai",
     "same-day delivery",
+    "same-day delivery chennai",
     "courier service",
+    "courier service chennai",
     "pickup and drop-off",
+    "pickup and drop chennai",
     "parcel delivery",
+    "parcel delivery chennai",
     "quick delivery",
     "fast courier",
     "transparent pricing",
     "trusted riders",
     "24/7 delivery service",
     "shopping assistant",
+    "grocery delivery chennai",
     "medicine delivery",
+    "medicine delivery chennai",
     "document delivery",
+    "document delivery chennai",
     "gift delivery",
     "returns service"
   ].join(", "),
-  authors: [{ name: "Errand Service", url: "https://yourdomain.com/errand" }],
+  authors: [{ name: "Errand Service", url: `${SITE_URL}/errand` }],
   creator: "Errand Service",
   publisher: "Errand Service",
   category: "Delivery Service",
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL(SITE_URL),
   
   openGraph: {
     type: "website",
@@ -48,7 +58,7 @@ export const metadata = {
     title: "Errand Service - Fast & Reliable Same-Day Local Delivery",
     description: "Same-day pickup and drop-off service with transparent pricing from ₹49. Trusted riders, 24/7 support.",
     siteName: "Errand Service",
-    url: "https://yourdomain.com/errand/",
+    url: `${SITE_URL}/errand/`,
     images: [
       {
         url: "/errand/og-image.png",
@@ -84,16 +94,11 @@ export const metadata = {
     "bingbot": "index, follow"
   },
   
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code"
-  },
-  
   alternates: {
-    canonical: "https://yourdomain.com/errand/",
+    canonical: `${SITE_URL}/errand/`,
     languages: {
-      "en-US": "https://yourdomain.com/errand/",
-      "en": "https://yourdomain.com/errand/"
+      "en-US": `${SITE_URL}/errand/`,
+      "en": `${SITE_URL}/errand/`
     }
   },
   
@@ -123,7 +128,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <meta name="theme-color" content="#f3b308" />
         
         {/* Mobile Optimization */}
@@ -135,11 +139,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="Errand" />
         
         {/* Search Engine Optimization */}
-        <meta name="description" content="Fast, reliable and transparent local errand and delivery service. Same-day pickup and drop-off in your city. Starting from ₹49." />
-        <meta name="keywords" content="errand service, delivery, local delivery, same-day delivery, courier service" />
-        <meta name="author" content="Errand Service" />
-        <meta name="publisher" content="Errand Service" />
-        <meta name="revisit-after" content="7 days" />
+        
         
         {/* Security & Privacy */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -147,21 +147,12 @@ export default function RootLayout({ children }) {
         <meta name="format-detection" content="telephone=no" />
         <meta name="format-detection" content="email=no" />
         
-        {/* Font Optimization */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        
         {/* Icons */}
         <link rel="icon" type="image/gif" href="/errand/favicon.gif" />
         <link rel="shortcut icon" type="image/gif" href="/errand/favicon.gif" />
         <link rel="apple-touch-icon" href="/errand/favicon.gif" sizes="180x180" />
         <link rel="manifest" href="/errand/manifest.json" />
         
-        {/* Canonical & Alternates */}
-        <link rel="canonical" href="https://yourdomain.com/errand/" />
-        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/errand/" />
-        <link rel="alternate" hrefLang="en-US" href="https://yourdomain.com/errand/" />
       </head>
       <body className={`${display.variable} ${body.variable}`}>
         <a href="#main-content" className="skip-to-content">Skip to main content</a>
