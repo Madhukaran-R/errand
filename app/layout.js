@@ -97,7 +97,7 @@ export const metadata = {
     }
   },
   
-  manifest: "/manifest.json",
+  manifest: "/errand/manifest.json",
   
   icons: {
     icon: "/errand/favicon.gif",
@@ -156,7 +156,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/gif" href="/errand/favicon.gif" />
         <link rel="shortcut icon" type="image/gif" href="/errand/favicon.gif" />
         <link rel="apple-touch-icon" href="/errand/favicon.gif" sizes="180x180" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/errand/manifest.json" />
         
         {/* Canonical & Alternates */}
         <link rel="canonical" href="https://yourdomain.com/errand/" />

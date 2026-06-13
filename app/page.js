@@ -194,6 +194,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Founders", href: `${BASE_PATH}/founders/` },
   { label: "Become a Rider", href: "#rider" },
   { label: "Contact Us", href: "#contact" }
 ];
@@ -244,6 +245,7 @@ const footerQuickLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Founders", href: `${BASE_PATH}/founders/` },
   { label: "Become a Rider", href: "#rider" },
   { label: "Contact Us", href: "#contact" }
 ];
