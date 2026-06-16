@@ -21,7 +21,7 @@ The workflow will automatically trigger on your next push. You can monitor it in
   3. Runs linting via `npm run lint`
   4. Builds the static export via `npm run build`
   5. Uploads the `out/` directory to GitHub Pages
-  6. Your site is live at: `https://Madhukaran-R.github.io/errand/`
+  6. Your site is live at: `https://errand.ltd/`
 
 ## Local Testing
 

@@ -1,7 +1,7 @@
 /* TEAM */
 Team: Errand Service
 Contact: errandsupport@gmail.com
-Website: https://errand.ltd/errand/
+Website: https://errand.ltd/
 Twitter: @errandservice
 Facebook: https://www.facebook.com/errandservice
 

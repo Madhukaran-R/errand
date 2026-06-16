@@ -73,7 +73,7 @@ Implemented 5 comprehensive schema types:
 - ✅ Font-display: swap (performance & visual stability)
 
 ### 10. **Canonical URLs & Alternates**
-- ✅ Canonical URL: https://errand.ltd/errand/
+- ✅ Canonical URL: https://errand.ltd/
 - ✅ hrefLang alternates (en, en-US)
 - ✅ Language-based alternates for international SEO
 
@@ -132,7 +132,7 @@ Implemented 5 comprehensive schema types:
 
 ## 🚀 Next Steps to Maximize SEO
 
-1. **Domain alignment**: Updated all SEO URLs to `https://errand.ltd/errand/`
+1. **Domain alignment**: Updated all SEO URLs to `https://errand.ltd/`
 2. **Add Google Search Console**: Verify domain and submit sitemap
 3. **Add Google Analytics 4**: Track visitor behavior
 4. **Add Bing Webmaster**: For Bing search indexing

@@ -17,8 +17,8 @@ const body = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Errand Service - Fast & Reliable Same-Day Local Delivery Starting ₹49",
-  description: "Fast, reliable, and transparent local errand service in Chennai. Same-day pickup, drop-off, and delivery with trusted riders and 24/7 support. Starting from ₹49 for 2 km.",
+  title: "Errand Service - Fast & Reliable Same-Day Local Delivery Starting ₹49 | Top Rated",
+  description: "⭐ Top-rated same-day delivery service in Chennai. Fast errand service for shopping, medicines, documents & more. Trusted by 100+ clients. Starting ₹49. 24/7 support. Book now!",
   keywords: [
     "errand service",
     "errand service chennai",
@@ -55,8 +55,8 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Errand Service - Fast & Reliable Same-Day Local Delivery",
-    description: "Same-day pickup and drop-off service with transparent pricing from ₹49. Trusted riders, 24/7 support.",
+    title: "Errand Service - Same-Day Local Delivery ₹49 | Fast & Reliable",
+    description: "Same-day errand delivery in Chennai. Trusted by 100+ clients. Fast pickup/drop, shopping, medicines, documents. Transparent pricing from ₹49. WhatsApp us now!",
     siteName: "Errand Service",
     url: `${SITE_URL}/`,
     images: [
@@ -71,15 +71,15 @@ export const metadata = {
         url: "/og-image-square.png",
         width: 800,
         height: 800,
-        alt: "Errand Service Logo"
+        alt: "Errand Service - Fast & Reliable Delivery"
       }
     ]
   },
   
   twitter: {
     card: "summary_large_image",
-    title: "Errand Service - Same-Day Local Delivery",
-    description: "Fast, reliable delivery from ₹49. Trusted riders, 24/7 support.",
+    title: "Errand Service - Same-Day Delivery | ₹49 Errand Service Chennai",
+    description: "Same-day errand service in Chennai. 100+ happy customers. Fast delivery, trusted riders, 24/7 support. Book at https://errand.ltd",
     creator: "@errandservice",
     images: ["/og-image.png"]
   },
@@ -105,13 +105,13 @@ export const metadata = {
   manifest: "/manifest.json",
   
   icons: {
-    icon: "/favicon.gif",
-    shortcut: "/favicon.gif",
-    apple: "/favicon.gif",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
     other: [
       {
         rel: "icon",
-        url: "/favicon.gif"
+        url: "/favicon.png"
       }
     ]
   },
@@ -148,9 +148,9 @@ export default function RootLayout({ children }) {
         <meta name="format-detection" content="email=no" />
         
         {/* Icons */}
-        <link rel="icon" type="image/gif" href="/favicon.gif" />
-        <link rel="shortcut icon" type="image/gif" href="/favicon.gif" />
-        <link rel="apple-touch-icon" href="/favicon.gif" sizes="180x180" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" sizes="180x180" />
         <link rel="manifest" href="/manifest.json" />
         
       </head>

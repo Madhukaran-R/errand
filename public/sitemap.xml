@@ -5,7 +5,7 @@
   
   <!-- Home Page -->
   <url>
-    <loc>https://errand.ltd/errand/</loc>
+    <loc>https://errand.ltd/</loc>
     <lastmod>2026-06-13T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -13,7 +13,7 @@
 
   <!-- Founders Page -->
   <url>
-    <loc>https://errand.ltd/errand/founders/</loc>
+    <loc>https://errand.ltd/founders/</loc>
     <lastmod>2026-06-13T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

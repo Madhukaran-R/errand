@@ -3,9 +3,9 @@
 
 # Default rules for all bots
 User-agent: *
-Allow: /errand/
-Allow: /errand/og-image.png
-Allow: /errand/favicon.gif
+Allow: /
+Allow: /og-image.png
+Allow: /favicon.png
 Disallow: /api/
 Disallow: /admin/
 Disallow: /*.map
@@ -14,16 +14,16 @@ Crawl-delay: 1
 
 # Google-specific rules
 User-agent: Googlebot
-Allow: /errand/
+Allow: /
 
 # Bing
 User-agent: Bingbot
-Allow: /errand/
+Allow: /
 Crawl-delay: 1
 
 # Yandex
 User-agent: Yandexbot
-Allow: /errand/
+Allow: /
 Crawl-delay: 1
 
 # Bad bots
@@ -34,4 +34,4 @@ User-agent: AhrefsBot
 Disallow: /
 
 # Sitemaps
-Sitemap: https://errand.ltd/errand/sitemap.xml
+Sitemap: https://errand.ltd/sitemap.xml

@@ -38,7 +38,7 @@ const structuredData = [
     "name": "Errand Service",
     "url": `${SITE_URL}`,
     "logo": `${SITE_URL}/logo.png`,
-    "description": "Fast, reliable and transparent local errand and delivery service. Same-day pickup and drop-off with 24/7 support.",
+    "description": "⭐ Trusted same-day errand service in Chennai. Fast delivery for shopping, medicines, documents & more. Top-rated by 100+ clients. Starting ₹49. Available 24/7.",
     "sameAs": [
       "https://www.facebook.com/errandservice",
       "https://www.instagram.com/errandservice",
@@ -66,7 +66,7 @@ const structuredData = [
     "@id": `${SITE_URL}`,
     "url": `${SITE_URL}`,
     "image": `${SITE_URL}/hero-image.png`,
-    "description": "Fast, reliable, and transparent local errand delivery service with same-day pickup and drop-off.",
+    "description": "Same-day errand delivery service in Chennai. Fast, reliable & transparent. 100+ happy customers. Shopping, medicines, documents, parcels & more. Starting ₹49. WhatsApp support 24/7.",
     "priceRange": "₹49-₹99",
     "areaServed": {
       "@type": "City",
@@ -226,16 +226,16 @@ const topPills = [
 ];
 
 const serviceCards = [
-  { icon: "cart",      title: "Shopping & Essentials",     desc: "Grocery, supermarket & essential item pickup", tag: "Delivery", eta: "35-55 mins" },
-  { icon: "medicine",  title: "Medicines & Healthcare",    desc: "Pharmacy pickup & medicine delivery", tag: "Urgent", eta: "25-45 mins" },
-  { icon: "doc",       title: "Documents & Parcels",       desc: "Document pickup, drop & courier services", tag: "Secure", eta: "30-50 mins" },
-  { icon: "car",       title: "Pickup & Drop Services",    desc: "Item pickup & drop across Chennai", tag: "Pickup", eta: "30-60 mins" },
-  { icon: "food",      title: "Food & Beverages",          desc: "Restaurant pickup & food delivery", tag: "Express", eta: "25-40 mins" },
-  { icon: "gift",      title: "Gifts & Surprises",         desc: "Surprise your loved ones with timely delivery", tag: "Scheduled", eta: "40-90 mins" },
-  { icon: "bag",       title: "Local Shopping Assistance", desc: "Buy and deliver items from local stores", tag: "Assisted", eta: "40-70 mins" },
-  { icon: "returns",   title: "Returns & Exchanges",       desc: "Product returns & exchanges made easy", tag: "Support", eta: "45-80 mins" },
-  { icon: "briefcase", title: "Business Errands",          desc: "Office tasks & business support", tag: "Business", eta: "30-65 mins" },
-  { icon: "elderly",   title: "Elderly Assistance",        desc: "Helping seniors with their daily needs", tag: "Care", eta: "35-70 mins" }
+  { icon: "cart",      title: "Shopping & Essentials",     desc: "Grocery pickup from supermarkets, malls & stores. Fast delivery of fresh groceries, staples & essentials.", tag: "Delivery", eta: "35-55 mins" },
+  { icon: "medicine",  title: "Medicines & Healthcare",    desc: "Urgent pharmacy pickup & medicine delivery. All prescription medicines delivered safely & on time.", tag: "Urgent", eta: "25-45 mins" },
+  { icon: "doc",       title: "Documents & Parcels",       desc: "Secure document courier & parcel services. Important docs delivered with proof of delivery.", tag: "Secure", eta: "30-50 mins" },
+  { icon: "car",       title: "Pickup & Drop Services",    desc: "Reliable item pickup & drop across Chennai. Car pickup for servicing, rental returns & more.", tag: "Pickup", eta: "30-60 mins" },
+  { icon: "food",      title: "Food & Beverages",          desc: "Hot food delivery from restaurants. Keep your meals fresh & enjoy on time.", tag: "Express", eta: "25-40 mins" },
+  { icon: "gift",      title: "Gifts & Surprises",         desc: "Surprise your loved ones with timely gift delivery. Personal gifts, flowers & more.", tag: "Scheduled", eta: "40-90 mins" },
+  { icon: "bag",       title: "Local Shopping Assistance", desc: "Shop from local stores & get items delivered home. Personal shopping errand service.", tag: "Assisted", eta: "40-70 mins" },
+  { icon: "returns",   title: "Returns & Exchanges",       desc: "Easy product returns & exchanges pickup. Hassle-free returns management service.", tag: "Support", eta: "45-80 mins" },
+  { icon: "briefcase", title: "Business Errands",          desc: "Office tasks, bank deposits & business errands. Professional & confidential service.", tag: "Business", eta: "30-65 mins" },
+  { icon: "elderly",   title: "Elderly Assistance",        desc: "Compassionate service for seniors. Help with shopping, bill payments & daily needs.", tag: "Care", eta: "35-70 mins" }
 ];
 
 const pricing = [
