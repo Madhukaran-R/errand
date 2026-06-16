@@ -390,7 +390,7 @@ export default function HomePage() {
       <div className="header-inner">
         <div className="header-brand">
           <div className="site-logo">
-            <LottieAnimation className="site-logo-lottie" src="/lottie/logo.lottie" ariaLabel="Errand logo" />
+            <LottieAnimation className="site-logo-lottie" src={getAssetPath("/lottie/logo.lottie")} ariaLabel="Errand logo" />
           </div>
           <div className="brand-text">
             <span className="brand-name">Errand</span>
@@ -442,7 +442,7 @@ export default function HomePage() {
         <div className="hero-visual">
           <LottieAnimation
             className="hero-img"
-            src="/lottie/hero.lottie"
+            src={getAssetPath("/lottie/hero.lottie")}
             ariaLabel="Errand rider delivering on scooter"
           />
           <div className="hero-price-card hero-price-top-left">
@@ -645,7 +645,7 @@ export default function HomePage() {
         <div className="footer-brand">
           <div className="footer-logo-row">
             <div className="site-logo footer-logo-circle">
-              <LottieAnimation className="site-logo-lottie" src="/lottie/logo.lottie" ariaLabel="Errand logo" />
+              <LottieAnimation className="site-logo-lottie" src={getAssetPath("/lottie/logo.lottie")} ariaLabel="Errand logo" />
             </div>
             <span className="brand-name footer-brand-name">Errand</span>
           </div>
