@@ -27,18 +27,17 @@ import {
 } from "lucide-react";
 import LottieAnimation from "./components/LottieAnimation";
 
-const BASE_PATH = "/errand";
 const SITE_URL = "https://errand.ltd";
 
-const getAssetPath = (path) => `${BASE_PATH}${path}`;
+const getAssetPath = (path) => (path.startsWith("/") ? path : `/${path}`);
 
 const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Errand Service",
-    "url": `${SITE_URL}/errand`,
-    "logo": `${SITE_URL}/errand/logo.png`,
+    "url": `${SITE_URL}`,
+    "logo": `${SITE_URL}/logo.png`,
     "description": "Fast, reliable and transparent local errand and delivery service. Same-day pickup and drop-off with 24/7 support.",
     "sameAs": [
       "https://www.facebook.com/errandservice",
@@ -64,9 +63,9 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Errand Service",
-    "@id": `${SITE_URL}/errand`,
-    "url": `${SITE_URL}/errand`,
-    "image": `${SITE_URL}/errand/hero-image.png`,
+    "@id": `${SITE_URL}`,
+    "url": `${SITE_URL}`,
+    "image": `${SITE_URL}/hero-image.png`,
     "description": "Fast, reliable, and transparent local errand delivery service with same-day pickup and drop-off.",
     "priceRange": "₹49-₹99",
     "areaServed": {
@@ -185,25 +184,25 @@ const structuredData = [
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": `${SITE_URL}/errand/`
+        "item": `${SITE_URL}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": `${SITE_URL}/errand/#services`
+        "item": `${SITE_URL}/#services`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Pricing",
-        "item": `${SITE_URL}/errand/#pricing`
+        "item": `${SITE_URL}/#pricing`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "How It Works",
-        "item": `${SITE_URL}/errand/#how-it-works`
+        "item": `${SITE_URL}/#how-it-works`
       }
     ]
   }
@@ -214,7 +213,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Founders", href: `${BASE_PATH}/founders/` },
+  { label: "Founders", href: "/founders/" },
   { label: "Become a Rider", href: "#rider" },
   { label: "Contact Us", href: "#contact" }
 ];
@@ -291,7 +290,7 @@ const footerQuickLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Founders", href: `${BASE_PATH}/founders/` },
+  { label: "Founders", href: "/founders/" },
   { label: "Become a Rider", href: "#rider" },
   { label: "Contact Us", href: "#contact" }
 ];

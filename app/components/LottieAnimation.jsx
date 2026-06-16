@@ -8,13 +8,10 @@ const DotLottiePlayer = dynamic(
   { ssr: false }
 );
 
-const BASE_PATH = "/errand";
-
 const resolveAssetPath = (path) => {
   if (typeof path !== "string") return path;
   if (path.startsWith("http") || path.startsWith("data:")) return path;
-  if (path.startsWith(`${BASE_PATH}/`)) return path;
-  return path.startsWith("/") ? `${BASE_PATH}${path}` : `${BASE_PATH}/${path}`;
+  return path.startsWith("/") ? path : `/${path}`;
 };
 
 export default function LottieAnimation({ src, className, ariaLabel }) {

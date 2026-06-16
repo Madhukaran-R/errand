@@ -2,21 +2,21 @@
   "name": "Errand Service - Fast & Reliable Local Delivery",
   "short_name": "Errand",
   "description": "Fast, reliable and transparent local errand and delivery service. Same-day pickup and drop-off starting from ₹49.",
-  "start_url": "/errand/",
+  "start_url": "/",
   "display": "standalone",
-  "scope": "/errand/",
+  "scope": "/",
   "background_color": "#ffffff",
   "theme_color": "#f3b308",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/errand/favicon.gif",
+      "src": "/favicon.gif",
       "sizes": "192x192",
       "type": "image/gif",
       "purpose": "any"
     },
     {
-      "src": "/errand/favicon.gif",
+      "src": "/favicon.gif",
       "sizes": "512x512",
       "type": "image/gif",
       "purpose": "any maskable"
@@ -25,13 +25,13 @@
   "categories": ["business", "lifestyle"],
   "screenshots": [
     {
-      "src": "/errand/og-image.png",
+      "src": "/og-image.png",
       "type": "image/png",
       "sizes": "1200x630",
       "form_factor": "wide"
     },
     {
-      "src": "/errand/og-image.png",
+      "src": "/og-image.png",
       "type": "image/png",
       "sizes": "1200x630",
       "form_factor": "narrow"

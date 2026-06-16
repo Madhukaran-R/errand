@@ -46,7 +46,7 @@ export const metadata = {
     "gift delivery",
     "returns service"
   ].join(", "),
-  authors: [{ name: "Errand Service", url: `${SITE_URL}/errand` }],
+  authors: [{ name: "Errand Service", url: SITE_URL }],
   creator: "Errand Service",
   publisher: "Errand Service",
   category: "Delivery Service",
@@ -58,17 +58,17 @@ export const metadata = {
     title: "Errand Service - Fast & Reliable Same-Day Local Delivery",
     description: "Same-day pickup and drop-off service with transparent pricing from ₹49. Trusted riders, 24/7 support.",
     siteName: "Errand Service",
-    url: `${SITE_URL}/errand/`,
+    url: `${SITE_URL}/`,
     images: [
       {
-        url: "/errand/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Errand Service - Fast & Reliable Delivery",
         type: "image/png"
       },
       {
-        url: "/errand/og-image-square.png",
+        url: "/og-image-square.png",
         width: 800,
         height: 800,
         alt: "Errand Service Logo"
@@ -81,7 +81,7 @@ export const metadata = {
     title: "Errand Service - Same-Day Local Delivery",
     description: "Fast, reliable delivery from ₹49. Trusted riders, 24/7 support.",
     creator: "@errandservice",
-    images: ["/errand/og-image.png"]
+    images: ["/og-image.png"]
   },
   
   robots: {
@@ -95,23 +95,23 @@ export const metadata = {
   },
   
   alternates: {
-    canonical: `${SITE_URL}/errand/`,
+    canonical: `${SITE_URL}/`,
     languages: {
-      "en-US": `${SITE_URL}/errand/`,
-      "en": `${SITE_URL}/errand/`
+      "en-US": `${SITE_URL}/`,
+      "en": `${SITE_URL}/`
     }
   },
   
-  manifest: "/errand/manifest.json",
+  manifest: "/manifest.json",
   
   icons: {
-    icon: "/errand/favicon.gif",
-    shortcut: "/errand/favicon.gif",
-    apple: "/errand/favicon.gif",
+    icon: "/favicon.gif",
+    shortcut: "/favicon.gif",
+    apple: "/favicon.gif",
     other: [
       {
         rel: "icon",
-        url: "/errand/favicon.gif"
+        url: "/favicon.gif"
       }
     ]
   },
@@ -148,10 +148,10 @@ export default function RootLayout({ children }) {
         <meta name="format-detection" content="email=no" />
         
         {/* Icons */}
-        <link rel="icon" type="image/gif" href="/errand/favicon.gif" />
-        <link rel="shortcut icon" type="image/gif" href="/errand/favicon.gif" />
-        <link rel="apple-touch-icon" href="/errand/favicon.gif" sizes="180x180" />
-        <link rel="manifest" href="/errand/manifest.json" />
+        <link rel="icon" type="image/gif" href="/favicon.gif" />
+        <link rel="shortcut icon" type="image/gif" href="/favicon.gif" />
+        <link rel="apple-touch-icon" href="/favicon.gif" sizes="180x180" />
+        <link rel="manifest" href="/manifest.json" />
         
       </head>
       <body className={`${display.variable} ${body.variable}`}>

@@ -1,15 +1,15 @@
 import { Link2, Mail, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
-const BASE_PATH = "/errand";
+const BASE_PATH = "";
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://errand.ltd").replace(/\/$/, "");
-const PAGE_URL = `${SITE_URL}${BASE_PATH}/founders/`;
+const PAGE_URL = `${SITE_URL}/founders/`;
 
 const founders = [
   {
     id: "founder-1",
     initials: "DR",
-    photo: `${BASE_PATH}/images/divakaran_rajendran.jpg`,
+    photo: "/images/divakaran_rajendran.jpg",
     name: "Divakaran Rajendran",
     role: "Founder",
     bio: "Passionate about simplifying everyday life by providing fast, reliable, and trustworthy errand services. Dedicated to helping individuals and businesses save time through efficient pickups, deliveries, and personal assistance. Committed to professionalism, transparency, and customer satisfaction in every task. Focused on ensuring each errand is handled with care, punctuality, and attention to detail. Driven by the belief that no task is too small when it helps make life easier.",
@@ -41,7 +41,7 @@ export const metadata = {
     siteName: "Errand Service",
     images: [
       {
-        url: `${BASE_PATH}/images/divakaran_rajendran.jpg`,
+        url: "/images/divakaran_rajendran.jpg",
         width: 1200,
         height: 630,
         alt: "Divakaran Rajendran - Founder of Errand Service"
@@ -52,7 +52,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Founder | Errand Service Leadership",
     description: "Meet the founder behind Errand Service and the mission driving local delivery.",
-    images: [`${BASE_PATH}/images/divakaran_rajendran.jpg`]
+    images: ["/images/divakaran_rajendran.jpg"]
   },
   robots: {
     index: true,
@@ -81,7 +81,7 @@ export default function FoundersPage() {
     worksFor: {
       "@type": "Organization",
       name: "Errand Service",
-      url: `${SITE_URL}${BASE_PATH}/`
+      url: `${SITE_URL}/`
     },
     description: founder.bio
   };
