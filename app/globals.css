@@ -184,11 +184,6 @@ body {
   height: 1rem;
 }
 
-/* legacy - keep for any remaining refs */
-.top-contact-bar {
-  display: none;
-}
-
 .site-logo {
   width: 38px;
   height: 38px;
@@ -211,36 +206,6 @@ body {
 .site-logo-lottie {
   width: 100%;
   height: 100%;
-}
-
-.top-contact-bar p {
-  margin: 0;
-  font-size: 0.77rem;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  font-weight: 700;
-  color: #2d2307;
-}
-
-.top-contact-bar a {
-  text-decoration: none;
-}
-
-.top-contact-bar a[href^="tel:"] {
-  font-family: var(--font-display), Impact, sans-serif;
-  font-size: clamp(1.5rem, 3.6vw, 2.25rem);
-  line-height: 0.92;
-  color: #111111;
-}
-
-.top-whatsapp-btn {
-  margin-left: auto;
-  background: #111111;
-  color: #ffffff;
-  border-radius: 999px;
-  padding: 0.45rem 0.72rem;
-  font-size: 0.82rem;
-  font-weight: 700;
 }
 
 .glow {
@@ -562,16 +527,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* hide legacy hero border – removed from JSX */
-.hero-bottom-border-wrapper,
-.hero-bottom-border {
-  display: none;
-}
 
-.hero-side { display: none; }
-
-.hero-image-wrap,
-.hero-lottie { display: none; }
 
 .eyebrow {
   margin: 0;
@@ -910,15 +866,7 @@ h1 {
   justify-content: center;
 }
 
-/* legacy number badge – no longer rendered */
-.service-number { display: none; }
 
-.service-card-v2 h3.old { display: none; }
-
-.service-card-v2 ul,
-.service-card-v2 li { display: none; }
-
-.addon-special { display: none; }
 
 /* ─── PRICING ─── */
 .pricing-v2 {
