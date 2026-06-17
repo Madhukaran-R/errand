@@ -33,8 +33,8 @@
   - Loads instantly
 
 - **New Social Sharing Images:**
-  - `/og-image.png` (1200×630px) - Standard OG image
-  - `/og-image-square.png` (800×800px) - Instagram-friendly square
+  - `/og-image-poster.png` (1200×630px) - Standard OG poster image
+  - `/og-image-square-poster.png` (800×800px) - Instagram-friendly square poster image
   - Both use brand yellow (#f3b308) with white borders
 
 ### 4. Enhanced Service Descriptions
@@ -71,8 +71,8 @@ Updated service cards with detailed, SEO-friendly descriptions:
 2. `app/page.js` - Service descriptions & LocalBusiness schema
 3. `public/manifest.json` - Updated to PNG favicon
 4. `public/favicon.png` - New 192×192px PNG (replaced .gif)
-5. `public/og-image.png` - New 1200×630px social image
-6. `public/og-image-square.png` - New 800×800px social image
+5. `public/og-image-poster.png` - New 1200×630px social poster image
+6. `public/og-image-square-poster.png` - New 800×800px social poster image
 
 ## 🚀 Deployment
 Push to GitHub to auto-deploy with:

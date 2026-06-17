@@ -4,7 +4,8 @@
 # Default rules for all bots
 User-agent: *
 Allow: /
-Allow: /og-image.png
+Allow: /og-image-poster.png
+Allow: /og-image-square-poster.png
 Allow: /favicon.png
 Disallow: /api/
 Disallow: /admin/

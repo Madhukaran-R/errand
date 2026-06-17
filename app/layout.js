@@ -8,16 +8,16 @@ const display = Bebas_Neue({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap"
-});
-
-const body = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap"
-});
-
-export const metadata = {
-  title: "Errand Service - Fast & Reliable Same-Day Local Delivery Starting ₹49 | Top Rated",
+        {
+        url: "/og-image-poster.png",
+        width: 1200,
+        height: 630
+      },
+      {
+        url: "/og-image-square-poster.png",
+        width: 800,
+        height: 800
+      }
   description: "⭐ Top-rated same-day delivery service in Chennai. Fast errand service for shopping, medicines, documents & more. Trusted by 100+ clients. Starting ₹49. 24/7 support. Book now!",
   keywords: [
     "errand service",
@@ -61,14 +61,14 @@ export const metadata = {
     url: `${SITE_URL}/`,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image-poster.png",
         width: 1200,
         height: 630,
         alt: "Errand Service - Fast & Reliable Delivery",
         type: "image/png"
       },
       {
-        url: "/og-image-square.png",
+        url: "/og-image-square-poster.png",
         width: 800,
         height: 800,
         alt: "Errand Service - Fast & Reliable Delivery"
@@ -81,7 +81,7 @@ export const metadata = {
     title: "Errand Service - Same-Day Delivery | ₹49 Errand Service Chennai",
     description: "Same-day errand service in Chennai. 100+ happy customers. Fast delivery, trusted riders, 24/7 support. Book at https://errand.ltd",
     creator: "@errandservice",
-    images: ["/og-image.png"]
+    images: ["/og-image-poster.png"]
   },
   
   robots: {
