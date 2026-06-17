@@ -25,14 +25,14 @@
   "categories": ["business", "lifestyle"],
   "screenshots": [
     {
-      "src": "/og-image-poster.png",
-      "type": "image/png",
+      "src": "/og-image-poster.jpg",
+      "type": "image/jpeg",
       "sizes": "1200x630",
       "form_factor": "wide"
     },
     {
-      "src": "/og-image-poster.png",
-      "type": "image/png",
+      "src": "/og-image-poster.jpg",
+      "type": "image/jpeg",
       "sizes": "1200x630",
       "form_factor": "narrow"
     }

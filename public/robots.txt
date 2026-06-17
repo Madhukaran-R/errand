@@ -5,7 +5,9 @@
 User-agent: *
 Allow: /
 Allow: /og-image-poster.png
+Allow: /og-image-poster.jpg
 Allow: /og-image-square-poster.png
+Allow: /og-image-square-poster.jpg
 Allow: /favicon.png
 Disallow: /api/
 Disallow: /admin/

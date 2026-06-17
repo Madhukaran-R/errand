@@ -61,17 +61,18 @@ export const metadata = {
     url: `${SITE_URL}/`,
     images: [
       {
-        url: "/og-image-poster.png",
+        url: `${SITE_URL}/og-image-poster.jpg`,
         width: 1200,
         height: 630,
         alt: "Errand Service - Fast & Reliable Delivery",
-        type: "image/png"
+        type: "image/jpeg"
       },
       {
-        url: "/og-image-square-poster.png",
+        url: `${SITE_URL}/og-image-square-poster.jpg`,
         width: 800,
         height: 800,
-        alt: "Errand Service - Fast & Reliable Delivery"
+        alt: "Errand Service - Fast & Reliable Delivery",
+        type: "image/jpeg"
       }
     ]
   },
@@ -81,7 +82,7 @@ export const metadata = {
     title: "Errand Service - Same-Day Delivery | ₹49 Errand Service Chennai",
     description: "Same-day errand service in Chennai. 100+ happy customers. Fast delivery, trusted riders, 24/7 support. Book at https://errand.ltd",
     creator: "@errandservice",
-    images: ["/og-image-poster.png"]
+    images: [`${SITE_URL}/og-image-poster.jpg`]
   },
   
   robots: {
