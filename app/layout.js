@@ -8,16 +8,16 @@ const display = Bebas_Neue({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap"
-        {
-        url: "/og-image-poster.png",
-        width: 1200,
-        height: 630
-      },
-      {
-        url: "/og-image-square-poster.png",
-        width: 800,
-        height: 800
-      }
+});
+
+const body = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap"
+});
+
+export const metadata = {
+  title: "Errand Service - Fast & Reliable Same-Day Local Delivery Starting ₹49 | Top Rated",
   description: "⭐ Top-rated same-day delivery service in Chennai. Fast errand service for shopping, medicines, documents & more. Trusted by 100+ clients. Starting ₹49. 24/7 support. Book now!",
   keywords: [
     "errand service",
