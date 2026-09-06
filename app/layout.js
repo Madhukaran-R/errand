@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 // ─────────────────────────────────────────────
 // CONSTANTS
@@ -342,8 +343,14 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//wa.me" />
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
         <link rel="preconnect"   href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* ── Google Analytics 4 — DNS prefetch (script loads after interactive) */}
+        <link rel="dns-prefetch"  href="//www.googletagmanager.com" />
+        <link rel="preconnect"    href="https://www.google-analytics.com" />
       </head>
       <body className={`${display.variable} ${body.variable}`}>
+        {/* GA4 — loads after hydration so it never blocks First Paint */}
+        <GoogleAnalytics />
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>

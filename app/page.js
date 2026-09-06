@@ -26,6 +26,7 @@ import {
   Zap,
 } from "lucide-react";
 import LottieAnimation from "./components/LottieAnimation";
+import AnalyticsEvents from "./components/AnalyticsEvents";
 
 // ─────────────────────────────────────────────
 // CONSTANTS  (single source of truth)
@@ -921,6 +922,9 @@ export default function HomePage() {
           <LibraryIcon name="whatsapp" />
           <span>Chat on WhatsApp</span>
         </a>
+
+        {/* Analytics event listeners — no DOM output */}
+        <AnalyticsEvents />
       </main>
     </>
   );
