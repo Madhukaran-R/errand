@@ -84,7 +84,7 @@ const structuredData = [
     logo: `${SITE_URL}/logo.png`,
     description:
       "Same-day errand delivery service in Chennai. Fast, reliable & transparent pricing. 100+ happy customers. Shopping, medicines, documents, parcels & more. From ₹49.",
-    priceRange: "₹49–₹99",
+    priceRange: "₹49–₹229",
     telephone: "+91-9944006016",
     email: EMAIL,
     areaServed: {
@@ -116,30 +116,12 @@ const structuredData = [
       "@type": "OfferCatalog",
       name: "Delivery Distance Pricing",
       itemListElement: [
-        {
-          "@type": "Offer",
-          name: "0–2 km delivery",
-          description: "Perfect for quick pick-ups & drop-offs",
-          price: "49",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
-        {
-          "@type": "Offer",
-          name: "2–5 km delivery",
-          description: "Ideal for local errands & deliveries",
-          price: "69",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
-        {
-          "@type": "Offer",
-          name: "5–8 km delivery",
-          description: "For farther errands within the city",
-          price: "99",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
+        { "@type": "Offer", name: "Up to 2 km",  price: "49",  priceCurrency: "INR", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", name: "2–5 km",      price: "79",  priceCurrency: "INR", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", name: "5–8 km",      price: "109", priceCurrency: "INR", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", name: "8–12 km",     price: "149", priceCurrency: "INR", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", name: "12–15 km",    price: "179", priceCurrency: "INR", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", name: "15–20 km",    price: "229", priceCurrency: "INR", availability: "https://schema.org/InStock" },
       ],
     },
   },
@@ -264,9 +246,12 @@ const serviceCards = [
 ];
 
 const pricing = [
-  { range: "0 – 2 KMS", fare: "₹49", note: "Perfect for quick pick-ups & drop-offs",   bestFor: "Best for single-stop nearby tasks" },
-  { range: "2 – 5 KMS", fare: "₹69", note: "Ideal for local errands & deliveries",      bestFor: "Most common for daily city errands", featured: true },
-  { range: "5 – 8 KMS", fare: "₹99", note: "For farther errands within the city",       bestFor: "Best for long cross-area deliveries" },
+  { range: "Up to 2 km",  fare: "₹49",  note: "Quick nearby pick-ups & drop-offs",     bestFor: "Single-stop tasks close by" },
+  { range: "2 – 5 km",   fare: "₹79",  note: "Ideal for local errands & deliveries",   bestFor: "Most common for daily city errands", featured: true },
+  { range: "5 – 8 km",   fare: "₹109", note: "Across neighbourhoods, no extra fees",   bestFor: "Cross-area deliveries" },
+  { range: "8 – 12 km",  fare: "₹149", note: "Reliable for longer city routes",        bestFor: "Office to home, city-wide tasks" },
+  { range: "12 – 15 km", fare: "₹179", note: "Still one flat rate, no surprises",      bestFor: "Distant zones within the city" },
+  { range: "15 – 20 km", fare: "₹229", note: "Flat fare, maximum city coverage",       bestFor: "Far end city deliveries" },
 ];
 
 const trustStats = [
@@ -609,7 +594,7 @@ export default function HomePage() {
             </div>
             <div className="pricing-notes">
               <ul>
-                <li><strong>Waiting charge:</strong> ₹10 per 10 mins</li>
+                <li><strong>Waiting charge:</strong> ₹2/min after first 10 min free</li>
                 <li><strong>Multiple stops:</strong> Extra charges applicable</li>
                 <li><strong>Rain / night charges:</strong> Applicable</li>
               </ul>
